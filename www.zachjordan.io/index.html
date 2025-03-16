@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/smallAzexLogo.jpg" />
+    <link
+      href="../unpkg.com/tailwindcss%402.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Azex</title>
+  </head>
+
+  <body id="top" class="bg-gray-50">
+    <!-- ========== NAVIGATION (DESKTOP) ========== -->
+    <nav
+      id="nav-on-scroll"
+      style="background: lightblue"
+      class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40"
+    >
+      <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+        <!-- Logo -->
+        <a href="#top" class="kill-link-style xl:mr-6">
+          <span
+            class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold"
+          >
+            Azex
+          </span>
+        </a>
+
+        <!-- Links -->
+        <a
+          href="#projects"
+          class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
+          >Projects</a
+        >
+        <a
+          href="#extras"
+          class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold"
+          >Extras</a
+        >
+
+        <!-- Contact Me Dropdown #1 (NAV) -->
+        <div class="relative inline-block float-right">
+          <!-- The button -->
+          <span
+            id="contact-button-nav"
+            onclick="toggleDropdownNav()"
+            class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold"
+          >
+            Contact Me
+          </span>
+
+          <!-- The dropdown menu -->
+          <div
+            id="contact-dropdown-nav"
+            class="hidden absolute right-0 top-full mt-1 w-44 rounded-md border border-gray-300 bg-white shadow-xl z-50"
+          >
+            <ul class="py-1">
+              <li>
+                <a
+                  href="mailto:abdulaziz.alharthi01@outlook.com"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Email
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/abdulazizalharthi/"
+                  target="_blank"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of Nav Dropdown #1 -->
+      </div>
+    </nav>
+
+    <!-- ========== NAVIGATION (MOBILE) ========== -->
+    <nav class="block bg-white shadow md:hidden">
+      <div
+        style="z-index: 999999999999999999999999999999999 !important"
+        class="fixed top-10 right-6"
+      >
+        <svg
+          onclick="openMobileNav()"
+          xmlns="http://www.w3.org/2000/svg"
+          class="duration-200 p-1.5 bg-gray-100 hover:bg-gray-200 h-12 w-12 rounded-full"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2.620"
+            d="M4 6h16M4 12h8m-8 6h16"
+          />
+        </svg>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-nav"
+      style="z-index: 999999999999999999999999999999999999999999999 !important"
+      class="fixed block md:hidden duration-300 ease bg-gray-100 offscreen-nav offscreen-nav-hidden"
+    >
+      <!-- ... mobile nav content ... -->
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="xl:p-15 pt-10 xl:pb-22">
+      <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+        <!-- We hide this entire row for mobile, show for desktop -->
+        <span class="hidden md:block lg:block">
+          <a href="#top" class="kill-link-style">
+            <span
+              class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold"
+            >
+              Azex
+            </span>
+          </a>
+          <a
+            href="#projects"
+            class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold"
+            >Projects</a
+          >
+          <a
+            href="#extras"
+            class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold"
+            >Extras</a
+          >
+
+          <!-- Contact Me Dropdown #2 (Main Content) -->
+          <div class="relative inline-block float-right">
+            <!-- The button -->
+            <span
+              id="contact-button-main"
+              onclick="toggleDropdownMain()"
+              class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold"
+            >
+              Contact Me
+            </span>
+
+            <!-- The dropdown menu -->
+            <div
+              id="contact-dropdown-main"
+              class="hidden absolute right-0 top-full mt-1 w-44 rounded-md border border-gray-300 bg-white shadow-xl z-50"
+            >
+              <ul class="py-1">
+                <li>
+                  <a
+                    href="mailto:abdulaziz.alharthi01@outlook.com"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  >
+                    Email
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/abdulazizalharthi/"
+                    target="_blank"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End of Main Content Dropdown #2 -->
+        </span>
+
+        <!-- Photo & Intro -->
+        <div class="mt-20">
+          <div class="w-full text-center">
+            <img
+              id="azex-image"
+              style="border-radius: 100%"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQH2E9jfisdD_g/profile-displayphoto-shrink_800_800/B4EZULqb06HMAc-/0/1739657429044?e=1747872000&v=beta&t=oWqPaFEMxVp9z-tk8U1FP0oJSNpeism6gT8Ou_VZVDA"
+              alt="azex photo!"
+              class="cursor-pointer xl:mt-10 inline-block animate__animated animate__fadeIn delay2 border-gray duration-300 ease hover:border-blue-400 shadow-md border-8 h-80 w-80 md:w-96 md:h-96 inline-block"
+            />
+          </div>
+          <div
+            class="animate__animated animate__fadeInUp p-14 delay2 mt-10 xl:mt-14 text-3xl lg:text-5xl font-extrabold text-gray-900"
+          >
+            Hey, I'm <span class="text-blue-500">Azex.</span> Here, you can
+            check out what I'm working on. I try my best to create useful
+            softwares &#10084;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <div id = "projects" class = "p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+        <div class = "sm:w-12/12 md:w-12/12 col-centered">
+          <div class = "p-4 pt-8 text-4xl md:text-6xl font-extrabold">My Projects</div>
+          <div class = "p-4 text-2xl md:text-4xl w-10/12 font-extrabold">I really love to create any useful tool and in fact this is why I have decided to be a software enginner!</div>
+    
+          <div class = "grid grid-cols-12">
+                <!--  Project 1 -->
+            <div class = "col-span-12 md:col-span-6 lg:col-span-4 p-4">
+                <a target="_blank" href = "https://chromewebstore.google.com/detail/%D8%AA%D8%A8%D8%AF%D9%8A%D9%84-%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D9%81-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/maomcdklpgpgenbjkhogkkoakgcblfda?authuser=0&hl=ar" target = "_blank" class = "kill-link-style">
+                    <div class = "cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
+                        
+                        <div class = "w-full text-center">
+                            <img src = "https://lh3.googleusercontent.com/AEJVcTwbe67IOJN2bt4bwunUPdSVoO--1SvnXaR0XgNu3ZiEiWJ4ruuHXEF27pDoyT1BxzPtnCuYHLRZTmV8t9i_=s120" alt = "logo"  class = "col-centered rounded-md mt-2 mb-1 h-14 w-14" />
+                        </div>
+                        <div class = "mt-2 ">
+                        <span class = "text-2xl lg:text-3xl font-extrabold text-gray-900">
+                            Fixing tool
+                        </span>
+                        <div class = "mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">Fixing the propblem of writeng words of english using arabic keyboard and vise versa</div>
+                    </div>
+                    
+                    </div>
+                </a>
+              </div>
+    
+            <div class = "col-span-12 md:col-span-6 lg:col-span-4 p-4">
+                <a href = "https://injaz.netlify.app/" target = "_blank" class = "kill-link-style">
+                    <div class = "cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
+                        
+                        <div class = "w-full text-center">
+                            <img src = "https://i.pinimg.com/736x/d0/a3/78/d0a378a6ea464b7f858f90cd868ba341.jpg" alt = "Boycott Buddy Logo"  class = "col-centered rounded-md mt-1 " width="120px" />
+                        </div>
+                        <div class = "mt-2 ">
+                        <span class = "text-2xl lg:text-3xl font-extrabold text-gray-900">
+                            Injaz
+                        </span>
+                        <div class = "mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">Productivity Tool</div>
+                    </div>
+                    
+                    </div>
+                </a>
+              </div>
+    
+            <div class = "col-span-12 md:col-span-6 lg:col-span-4 p-4">
+                <a href = "https://chromewebstore.google.com/detail/%D9%85%D8%B0%D9%83%D8%B1-%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%86%D8%A8%D9%8A-%D8%A7%D9%84%D8%AD/pdidkhmibipkalfagphhcjocgblgdehc?hl=ar&authuser=0" target = "_blank" class = "kill-link-style">
+                    <div class = "cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
+                        
+                        <div class = "w-full text-center">
+                            <img src = "https://lh3.googleusercontent.com/D4IW36c8Zxvr-3blVp14C5Fnlsq8nFOMyfWd9AOWlt9FAQKRuM3f-sS4lQpLTGAQWWVnvljd4KwKgIoJ98OOFtOu=s120" alt = ""  class = "col-centered rounded-md mt-2 mb-1 h-14 w-14" />
+                        </div>
+                        <div class = "mt-2 ">
+                        <span class = "text-2xl lg:text-3xl font-extrabold text-gray-900">
+                            Reminder tool
+                        </span>
+                        <div class = "mt-1 text-gray-900 font-extrabold text-xl lg:text-2xl">Reminder to pray on prophet mohammed peace upon him</div>
+                    </div>
+                    
+                    </div>
+                </a>
+              </div>
+    
+           
+            
+              </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id = "extras" class = "p-4 md:pt-24 pb-26 xl:p-20 bg-gray-900 text-gray-50">
+        <div class = "sm:w-12/12 md:w-12/12 col-centered">
+          <div class = "p-4 pt-8 text-4xl md:text-6xl font-extrabold">Extras</div>
+          <div class = "p-4 text-2xl md:text-4xl w-10/12 font-extrabold">while I seem very intersted to web development , this dose not mean I am not intersted with other topics!</div>
+    
+          
+          
+    
+          
+    
+          <div class = "mt-1 text-left w-full p-4">
+            <a href = "https://www.youtube.com/watch?v=qaNZKH5NohQ" target = "_blank" class = "kill-link-style">
+                <div class = "cursor-pointer p-6 bg-transparent border-4 border-blue-400 w-full h-full duration-200 move-up-slightly rounded-lg ease text-blue-400 hover:text-gray-900 hover:bg-blue-400 hover-padding">
+                    <div class = "font-extrabold text-3xl md:text-4xl inherit">
+                        Introduction to Ethical Hacking crash course
+                    </div>   
+                    <div class = "font-bold italic mt-2 text-2xl md:text-3xl text-white">
+                        Learning many things from networking to kali linux and I ended up applying to controll my other computer from my labtob! 
+                    </div>
+                </div>
+            </a>
+          </div>
+    
+          <div class = "mt-1 text-left w-full p-4">
+            
+                <div class = "cursor-pointer p-6 bg-transparent border-4 border-blue-400 w-full h-full duration-200 move-up-slightly rounded-lg ease text-blue-400 hover:text-gray-900 hover:bg-blue-400 hover-padding">
+                    <div class = "font-extrabold text-3xl md:text-4xl inherit">
+                        Useful tools 
+                    </div>   
+                    <div class = "font-bold italic mt-2 text-2xl md:text-3xl text-white">
+                        Figma,Git and Github,VS code, and many other tools that I use to make my work easier and more efficient
+                    </div>
+                </div>
+            
+          </div>
+    
+         
+        </div>
+      </div>
+    
+     
+    
+      <div class = "w-full bg-gray-200 text-center block p-4">
+        <span class = "font-extrabold text-gray-900 text-xl">
+            <div class = "mt-1">© 2025 Azex. All Rights Reserved.</div></span>
+    
+    
+          
+        </a>
+      </div>
+      </div>
+    
+    <!-- ========== SCRIPTS ========== -->
+    <script
+      src="../cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../unpkg.com/sweetalert%402.1.2/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
